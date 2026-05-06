@@ -1,0 +1,8 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Archives / large artifacts (adjust if you want to track jars)
+*.log
+*.log.*
