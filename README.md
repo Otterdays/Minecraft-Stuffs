@@ -8,7 +8,7 @@ Umbrella spot for Minecraft-related work, tooling, and adjacent voxel projects. 
 
 | Project | What it is |
 |--------|-------------|
-| [**A Voxel Christmas**](https://github.com/Otterdays/GAME-A-Voxel-Christmas) | Voxel-inspired winter scene: procedural terrain, particles, post-processing; **Three.js** + optional **.NET / WebView2** Windows shell. |
+| [**A Voxel Christmas**](https://github.com/Otterdays/GAME-A-Voxel-Christmas) | Voxel-inspired winter scene: procedural terrain, particles, post-processing; **Three.js** + optional **.NET / WebView2** Windows shell. **Play (alpha):** [otterdays.github.io/GAME-A-Voxel-Christmas](https://otterdays.github.io/GAME-A-Voxel-Christmas/). |
 
 ## Server panels & hosting
 
