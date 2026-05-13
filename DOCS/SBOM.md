@@ -11,6 +11,16 @@
 - Added a standalone `index.html` landing page at the repo root.
 - No package manager, framework, runtime dependency, or bundled asset was introduced.
 
+## 2026-05-13 Branding Pass
+
+- Updated public-facing copy to brand the collection as `Otters MC Studios`.
+- No dependencies, packages, or third-party assets were added or removed.
+
+## 2026-05-13 README Web Link
+
+- Added the live GitHub Pages URL to `README.md`.
+- No dependencies, packages, or third-party assets were added or removed.
+
 ## 2026-05-13 Baseline Inventory
 
 - Repo root currently appears documentation-only.

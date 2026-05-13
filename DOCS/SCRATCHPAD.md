@@ -1,6 +1,38 @@
 <!-- PRESERVATION RULE: Never delete or replace content. Append or annotate only. -->
 # SCRATCHPAD
 
+## Active Task - 2026-05-13 README Web Link
+
+- Goal: add the live landing page URL near the top of `README.md`.
+- Status: completed.
+- Outcome: `README.md` now exposes the GitHub Pages link prominently for fast access.
+
+## Last 5 Actions
+
+1. Re-read `DOCS/SUMMARY.md`, `DOCS/SBOM.md`, `DOCS/SCRATCHPAD.md`, and
+   `DOCS/STYLE_GUIDE.md`.
+2. Re-read the top section of `README.md`.
+3. Added the live site URL directly under the GitHub repo link.
+4. Started the doc checkpoint for the README link pass.
+5. Updated status docs for the change.
+
+## Active Task - 2026-05-13 Branding Pass
+
+- Goal: brand the public landing materials as `Otters MC Studios`.
+- Status: completed.
+- Outcome: public-facing copy now leads with `Otters MC Studios` while preserving
+  `Minecraft-Stuffs` as the repo/hub identifier.
+
+## Last 5 Actions
+
+1. Re-read the current `index.html`, `README.md`, `DOCS/SCRATCHPAD.md`,
+   `DOCS/SUMMARY.md`, and `DOCS/CHANGELOG.md`.
+2. Confirmed the site currently uses `Minecraft Stuffs` as the visible public brand.
+3. Chose a light rebrand approach: keep the repo identity, upgrade the public-facing
+   brand.
+4. Targeted the public surfaces first: `index.html` and `README.md`.
+5. Applied the brand pass and updated the status docs.
+
 ## Active Task - 2026-05-13 Root HTML Landing Page
 
 - Goal: add a real root landing website for the repo links.

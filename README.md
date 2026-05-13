@@ -1,17 +1,25 @@
-# Minecraft Stuffs
+# Otters MC Studios
 
 ![Repo role](https://img.shields.io/badge/repo-hub-1f6feb?style=for-the-badge)
 ![Theme](https://img.shields.io/badge/focus-minecraft-2ea043?style=for-the-badge)
 ![Content](https://img.shields.io/badge/content-mods%20%7C%20panels%20%7C%20tools-8957e5?style=for-the-badge)
 ![Docs](https://img.shields.io/badge/docs-active-f59e0b?style=for-the-badge)
 
-> A front door for Otterdays Minecraft work: mods, server panels, tools, and voxel
-> side projects.
+> Minecraft mods, server panels, tools, and voxel side projects under one studio
+> banner.
 
-`Minecraft-Stuffs` is a lightweight hub repo. Most projects live in their own
-repositories; this page is the map that ties them together.
+`Minecraft-Stuffs` is the hub repo for **Otters MC Studios**. Most projects live in
+their own repositories; this page is the map that ties the collection together.
 
 **GitHub:** https://github.com/Otterdays/Minecraft-Stuffs
+  
+**Web:** [otterdays.github.io/Minecraft-Stuffs](https://otterdays.github.io/Minecraft-Stuffs/)
+
+## Studio Brand
+
+- Brand: `Otters MC Studios`
+- Hub/repo: `Minecraft-Stuffs`
+- Focus: Minecraft mods, server tools, utilities, and voxel experiments
 
 ## Start Here
 

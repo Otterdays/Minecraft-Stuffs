@@ -8,6 +8,10 @@
   progression from `MC-Server-repo` to `Block-Panel-V2` to `Block-Panel-V3`.
 - A standalone root `index.html` now provides a visual landing website for the repo
   links without requiring any build step.
+- Public-facing branding now presents the collection as `Otters MC Studios` while
+  keeping `Minecraft-Stuffs` as the hub repo name.
+- `README.md` now links directly to the live GitHub Pages site near the top for
+  faster click-through.
 
 ## Project Status
 
