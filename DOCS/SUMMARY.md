@@ -6,6 +6,8 @@
 - `README.md` now serves as a more thematic landing page for the repo hub.
 - The public page now highlights the repo purpose, docs entry points, and the
   progression from `MC-Server-repo` to `Block-Panel-V2` to `Block-Panel-V3`.
+- A standalone root `index.html` now provides a visual landing website for the repo
+  links without requiring any build step.
 
 ## Project Status
 

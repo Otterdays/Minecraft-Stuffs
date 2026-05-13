@@ -1,6 +1,22 @@
 <!-- PRESERVATION RULE: Never delete or replace content. Append or annotate only. -->
 # SCRATCHPAD
 
+## Active Task - 2026-05-13 Root HTML Landing Page
+
+- Goal: add a real root landing website for the repo links.
+- Status: completed.
+- Outcome: added a single-file `index.html` landing page with a dark themed layout,
+  grouped project cards, and direct repo links.
+
+## Last 5 Actions
+
+1. Re-read `DOCS/SUMMARY.md`, `DOCS/SBOM.md`, `DOCS/SCRATCHPAD.md`, and
+   `DOCS/STYLE_GUIDE.md` before starting the HTML pass.
+2. Listed the repo root to confirm no existing `index.html` or site assets.
+3. Re-read the themed `README.md` to mirror its public structure.
+4. Chose a single-file static landing page approach to keep the repo simple.
+5. Added `index.html` and linked it from `README.md`.
+
 ## Active Task - 2026-05-13 README Landing Page Pass
 
 - Goal: turn `README.md` into a stronger thematic landing page for the repo hub.

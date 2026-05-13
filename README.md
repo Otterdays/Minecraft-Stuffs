@@ -15,6 +15,7 @@ repositories; this page is the map that ties them together.
 
 ## Start Here
 
+- Landing page: `index.html`
 - Project snapshot: `DOCS/SUMMARY.md`
 - Working log: `DOCS/SCRATCHPAD.md`
 - Dependency tracking: `DOCS/SBOM.md`

@@ -18,6 +18,7 @@ The format loosely follows Keep a Changelog.
   - `My_Thoughts.md`
   - `ARCHITECTURE.md`
 - `DOCS/debugs/` directory for future debug logs.
+- Root `index.html` landing page for the repo project links.
 
 ### Changed
 

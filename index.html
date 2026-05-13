@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft Stuffs</title>
+  <meta
+    name="description"
+    content="Otterdays Minecraft hub for mods, server panels, tools, and voxel side projects."
+  />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1220;
+      --bg-elev: rgba(14, 23, 39, 0.86);
+      --panel: rgba(17, 25, 40, 0.94);
+      --panel-2: rgba(24, 34, 54, 0.94);
+      --text: #f5f7fb;
+      --muted: #a9b7cf;
+      --line: rgba(120, 146, 186, 0.24);
+      --green: #4ade80;
+      --cyan: #38bdf8;
+      --violet: #a78bfa;
+      --gold: #fbbf24;
+      --red: #fb7185;
+      --shadow: 0 20px 45px rgba(0, 0, 0, 0.34);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.14), transparent 28%),
+        radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.16), transparent 24%),
+        linear-gradient(180deg, #08101c 0%, #0b1220 42%, #0d1624 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      padding: 28px 0 64px;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 24px;
+      padding: 14px 18px;
+      background: rgba(11, 18, 32, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow);
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+      box-shadow: 0 0 18px rgba(74, 222, 128, 0.55);
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav a,
+    .button {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+        background 0.15s ease;
+    }
+
+    .nav a:hover,
+    .button:hover,
+    .card:hover,
+    .project:hover {
+      transform: translateY(-2px);
+    }
+
+    .nav a:hover,
+    .button:hover {
+      color: var(--text);
+      border-color: rgba(167, 139, 250, 0.45);
+      background: rgba(167, 139, 250, 0.08);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 44px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(74, 222, 128, 0.11), transparent 34%),
+        linear-gradient(135deg, rgba(56, 189, 248, 0.11), transparent 55%),
+        linear-gradient(180deg, rgba(19, 31, 49, 0.98), rgba(12, 20, 35, 0.98));
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -120px auto;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.18), transparent 64%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--green);
+      background: rgba(74, 222, 128, 0.1);
+      border: 1px solid rgba(74, 222, 128, 0.18);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    h1 {
+      max-width: 11ch;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .button-primary {
+      color: #07111d;
+      background: linear-gradient(135deg, var(--green), #86efac);
+      border-color: transparent;
+      font-weight: 800;
+    }
+
+    .button-primary:hover {
+      color: #07111d;
+      background: linear-gradient(135deg, #86efac, #bbf7d0);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin: 24px 0 36px;
+    }
+
+    .card {
+      padding: 20px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: var(--bg-elev);
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .card:hover,
+    .project:hover {
+      border-color: rgba(56, 189, 248, 0.32);
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-size: 1.9rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .section {
+      margin-top: 28px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 850;
+      letter-spacing: -0.03em;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 720px;
+      line-height: 1.65;
+    }
+
+    .featured {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 16px;
+      margin-bottom: 26px;
+    }
+
+    .featured-main {
+      padding: 26px;
+      border-radius: 28px;
+      border: 1px solid rgba(167, 139, 250, 0.24);
+      background:
+        linear-gradient(135deg, rgba(167, 139, 250, 0.12), transparent 38%),
+        linear-gradient(180deg, var(--panel), var(--panel-2));
+      box-shadow: var(--shadow);
+    }
+
+    .featured-label {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.18);
+    }
+
+    .featured-main p,
+    .featured-side p,
+    .project p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .featured-main h3 {
+      font-size: clamp(1.65rem, 3vw, 2.4rem);
+      margin-bottom: 14px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .featured-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #dce7f8;
+      background: rgba(120, 146, 186, 0.12);
+      border: 1px solid rgba(120, 146, 186, 0.2);
+    }
+
+    .featured-side {
+      display: grid;
+      gap: 16px;
+    }
+
+    .mini-panel {
+      padding: 22px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15, 24, 40, 0.96), rgba(10, 17, 29, 0.96));
+      box-shadow: var(--shadow);
+    }
+
+    .mini-panel h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 22px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(15, 23, 38, 0.94), rgba(10, 16, 28, 0.94));
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+
+    .project-head {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: start;
+    }
+
+    .project h3 {
+      font-size: 1.18rem;
+      font-weight: 850;
+    }
+
+    .project-type {
+      color: var(--cyan);
+      font-size: 0.84rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 24px;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      background: rgba(11, 18, 32, 0.82);
+      box-shadow: var(--shadow);
+    }
+
+    .footer strong {
+      color: var(--text);
+    }
+
+    @media (max-width: 960px) {
+      .stats,
+      .featured,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 32px 24px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(calc(100% - 20px), var(--max));
+        padding-top: 18px;
+      }
+
+      .topbar {
+        border-radius: 24px;
+      }
+
+      .hero-actions,
+      .nav {
+        width: 100%;
+      }
+
+      .nav a,
+      .button {
+        flex: 1 1 auto;
+        text-align: center;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Minecraft Stuffs</span>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#panels">Panels</a>
+        <a href="#mods">Mods</a>
+        <a href="#voxel">Voxel</a>
+        <a href="#docs">Docs</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">Minecraft hub · Otterdays projects</div>
+      <h1>One place for the good Minecraft stuff.</h1>
+      <p class="hero-copy">
+        Mods, server panels, utility tools, shader experiments, and voxel side
+        projects. This repo is the front door that ties the whole collection together.
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/Otterdays/Minecraft-Stuffs">
+          Open GitHub repo
+        </a>
+        <a class="button" href="README.md">Read README</a>
+        <a class="button" href="#project-map">Browse links</a>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Overview">
+      <article class="card">
+        <div class="stat-label">Repo role</div>
+        <div class="stat-value">Hub</div>
+      </article>
+      <article class="card">
+        <div class="stat-label">Project groups</div>
+        <div class="stat-value">3</div>
+      </article>
+      <article class="card">
+        <div class="stat-label">Linked projects</div>
+        <div class="stat-value">13</div>
+      </article>
+      <article class="card">
+        <div class="stat-label">Vibe</div>
+        <div class="stat-value">Dark</div>
+      </article>
+    </section>
+
+    <section class="featured">
+      <article class="featured-main">
+        <span class="featured-label">Featured lineage</span>
+        <h3>Block Panel, from browser roots to modern control plane.</h3>
+        <p>
+          The server panel line evolves from
+          <strong>MC-Server-repo</strong> to <strong>Block-Panel-V2</strong> and then to
+          <strong>Block-Panel-V3</strong>. Different stacks, same direction: better
+          tooling for running Minecraft servers without the usual mess.
+        </p>
+        <div class="featured-links">
+          <span class="tag">MC-Server-repo</span>
+          <span class="tag">Block-Panel-V2</span>
+          <span class="tag">Block-Panel-V3</span>
+        </div>
+      </article>
+      <div class="featured-side">
+        <article class="mini-panel">
+          <h3>What lives here</h3>
+          <p>
+            Fabric mods, supporting libraries, server tooling, creator utilities, and
+            small voxel/game experiments.
+          </p>
+        </article>
+        <article class="mini-panel" id="docs">
+          <h3>Docs quick links</h3>
+          <p>
+            <a href="DOCS/SUMMARY.md">SUMMARY</a> ·
+            <a href="DOCS/SCRATCHPAD.md">SCRATCHPAD</a> ·
+            <a href="DOCS/SBOM.md">SBOM</a> ·
+            <a href="DOCS/STYLE_GUIDE.md">STYLE_GUIDE</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="project-map">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Project map</h2>
+          <p class="section-subtitle">
+            Clean sections, direct links, and short summaries so you can jump where you
+            need fast.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="panels">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Server panels & hosting</h2>
+          <p class="section-subtitle">
+            Browser-first roots, native Windows tools, and self-hosted control plane work.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <a class="project" href="https://github.com/Otterdays/MC-Server-repo">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Panel V1</div>
+              <h3>MC-Server-repo</h3>
+            </div>
+            <span class="tag">Browser</span>
+          </div>
+          <p>
+            Browser-based Minecraft dedicated server dashboard with server and mod
+            management plus an AI assistant.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Dedicated server</span>
+            <span class="tag">Dashboard</span>
+            <span class="tag">AI tools</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/Block-Panel-V2">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Panel V2</div>
+              <h3>Block-Panel-V2</h3>
+            </div>
+            <span class="tag">Windows</span>
+          </div>
+          <p>
+            Native Windows desktop app for Minecraft server management using Tauri v2,
+            Rust, React, and TypeScript.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Tauri</span>
+            <span class="tag">Rust</span>
+            <span class="tag">React</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/Block-Panel-V2-Public">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Public release</div>
+              <h3>BlockPanel-V2-Public</h3>
+            </div>
+            <span class="tag">Portable</span>
+          </div>
+          <p>
+            Public-facing release repo and landing site for the portable V2 Windows
+            server manager line.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Landing page</span>
+            <span class="tag">Downloads</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/Block-Panel-V3">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Panel V3</div>
+              <h3>Block-Panel-V3</h3>
+            </div>
+            <span class="tag">Self-hosted</span>
+          </div>
+          <p>
+            Self-hosted Minecraft control plane for Java and Bedrock servers with
+            Phoenix LiveView and PostgreSQL.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Elixir</span>
+            <span class="tag">LiveView</span>
+            <span class="tag">Postgres</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/Otters-Den-Server">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Server site</div>
+              <h3>Otters-Den-Server</h3>
+            </div>
+            <span class="tag">GitHub Pages</span>
+          </div>
+          <p>
+            Public site for the Otter's Den survival server and related community-facing
+            info.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Community</span>
+            <span class="tag">Server page</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="mods">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Mods, plugins & tools</h2>
+          <p class="section-subtitle">
+            Fabric projects, creator utilities, and helper scaffolds for Minecraft work.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <a class="project" href="https://github.com/Otterdays/Mc-Core-Mod">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Fabric core</div>
+              <h3>Mc-Core-Mod</h3>
+            </div>
+            <span class="tag">Shared services</span>
+          </div>
+          <p>
+            Fabric core library plus optional core mod/API jar for shared services,
+            ready-state dispatch, and update checks.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Fabric</span>
+            <span class="tag">Core API</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/Minecraft-Civ-Remixed">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Fabric mod</div>
+              <h3>Minecraft-Civ-Remixed</h3>
+            </div>
+            <span class="tag">Economy</span>
+          </div>
+          <p>
+            Civ/economy add-on with wallet commands, onboarding messages, jobs, and
+            optional mining and combat payouts.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Commands</span>
+            <span class="tag">Jobs</span>
+            <span class="tag">Rewards</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/advancement-fix">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Fabric mod</div>
+              <h3>advancement-fix</h3>
+            </div>
+            <span class="tag">Client-side</span>
+          </div>
+          <p>
+            Enlarges the vanilla Advancements screen without replacing advancement data
+            or building a separate custom UI.
+          </p>
+          <div class="project-tags">
+            <span class="tag">UI tweak</span>
+            <span class="tag">Vanilla data</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/McOtterShaders">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Shader pack</div>
+              <h3>McOtterShaders</h3>
+            </div>
+            <span class="tag">OptiFine / Iris</span>
+          </div>
+          <p>
+            Shader pack work with GLSL and supporting docs for rendering experiments.
+          </p>
+          <div class="project-tags">
+            <span class="tag">GLSL</span>
+            <span class="tag">Visuals</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/MC-Helpy-Helper">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Fabric mod</div>
+              <h3>MC-Helpy-Helper</h3>
+            </div>
+            <span class="tag">Utility</span>
+          </div>
+          <p>
+            Turns `/help` into a searchable command browser for faster in-game discovery.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Search</span>
+            <span class="tag">Commands</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/Feeshman-Deelux">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Fabric mod</div>
+              <h3>Feeshman Deelux</h3>
+            </div>
+            <span class="tag">1.20.1</span>
+          </div>
+          <p>
+            Auto-fishing, HUD elements, stats, and achievement-focused gameplay tweaks.
+          </p>
+          <div class="project-tags">
+            <span class="tag">HUD</span>
+            <span class="tag">Fishing</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/ChipperChopper">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Fabric mod</div>
+              <h3>ChipperChopper</h3>
+            </div>
+            <span class="tag">AI behavior</span>
+          </div>
+          <p>
+            Autonomous AI tree harvesting with behavior-tree logic and a monitoring HUD.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Agent</span>
+            <span class="tag">Harvesting</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/Minecraft-Fabric-Sample-Mod">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Template</div>
+              <h3>Minecraft-Fabric-Sample-Mod</h3>
+            </div>
+            <span class="tag">Starter</span>
+          </div>
+          <p>
+            Barebones Fabric template for spinning up a new mod project quickly.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Scaffold</span>
+            <span class="tag">Gradle</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/MC-Texture-Maker">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Creator tool</div>
+              <h3>MC-Texture-Maker</h3>
+            </div>
+            <span class="tag">Python</span>
+          </div>
+          <p>
+            Texture and skin editor with CustomTkinter UI and 3D preview support.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Textures</span>
+            <span class="tag">3D preview</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/MC-Companion-Map">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Companion tool</div>
+              <h3>MC-Companion-Map</h3>
+            </div>
+            <span class="tag">LAN</span>
+          </div>
+          <p>
+            Fabric mod with local HTTP API plus an Android overhead map companion.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Android</span>
+            <span class="tag">HTTP API</span>
+          </div>
+        </a>
+
+        <a class="project" href="https://github.com/Otterdays/PaperMC-Plugins">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Plugin scaffold</div>
+              <h3>PaperMC-Plugins</h3>
+            </div>
+            <span class="tag">Paper</span>
+          </div>
+          <p>
+            Minimal Paper plugin scaffold using Gradle Kotlin and a modern Paper stack.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Plugin dev</span>
+            <span class="tag">Starter</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="voxel">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Games & voxel</h2>
+          <p class="section-subtitle">
+            Side projects that orbit the same visual and sandbox energy.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <a class="project" href="https://github.com/Otterdays/GAME-A-Voxel-Christmas">
+          <div class="project-head">
+            <div>
+              <div class="project-type">Voxel scene</div>
+              <h3>A Voxel Christmas</h3>
+            </div>
+            <span class="tag">Playable alpha</span>
+          </div>
+          <p>
+            Voxel-inspired winter scene with procedural terrain, particles,
+            post-processing, and an optional .NET / WebView2 Windows shell.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Three.js</span>
+            <span class="tag">WebView2</span>
+            <span class="tag">Procedural</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <strong>Minecraft Stuffs</strong> is a curated index, not a monorepo.
+      Most projects live in their own repositories. This page exists to make the links
+      feel like an actual front door instead of a raw list.
+    </footer>
+  </div>
+</body>
+</html>
