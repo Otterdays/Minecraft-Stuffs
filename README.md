@@ -4,6 +4,12 @@ Umbrella spot for Minecraft-related work, tooling, and adjacent voxel projects. 
 
 **GitHub:** https://github.com/Otterdays/Minecraft-Stuffs
 
+## Docs
+
+- Project snapshot: `DOCS/SUMMARY.md`
+- Working log: `DOCS/SCRATCHPAD.md`
+- Dependency tracking: `DOCS/SBOM.md`
+
 ## Games & voxel
 
 | Project | What it is |
