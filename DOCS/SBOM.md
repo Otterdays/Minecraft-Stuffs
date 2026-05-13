@@ -1,6 +1,11 @@
 <!-- PRESERVATION RULE: Never delete or replace content. Append or annotate only. -->
 # SBOM
 
+## 2026-05-13 README Landing Page Pass
+
+- Reviewed dependency state during the README redesign.
+- No packages, runtimes, or bundled third-party assets were added or removed.
+
 ## 2026-05-13 Baseline Inventory
 
 - Repo root currently appears documentation-only.

@@ -1,6 +1,12 @@
 <!-- PRESERVATION RULE: Never delete or replace content. Append or annotate only. -->
 # SUMMARY
 
+## Project Status Update - 2026-05-13
+
+- `README.md` now serves as a more thematic landing page for the repo hub.
+- The public page now highlights the repo purpose, docs entry points, and the
+  progression from `MC-Server-repo` to `Block-Panel-V2` to `Block-Panel-V3`.
+
 ## Project Status
 
 - `Minecraft-Stuffs` is a lightweight umbrella repo for Minecraft-related projects,

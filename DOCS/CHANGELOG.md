@@ -21,5 +21,7 @@ The format loosely follows Keep a Changelog.
 
 ### Changed
 
+- Reworked `README.md` into a thematic landing page with a stronger intro, quick
+  links, clearer project grouping, and an explicit Block Panel lineage.
 - Expanded `README.md` to include `Mc-Core-Mod`, `Minecraft-Civ-Remixed`,
   `advancement-fix`, `Block-Panel-V2`, and `MC-Server-repo`.
