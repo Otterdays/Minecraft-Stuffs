@@ -17,7 +17,7 @@ Umbrella spot for Minecraft-related work, tooling, and adjacent voxel projects. 
 | [Block-Panel-V3](https://github.com/Otterdays/Block-Panel-V3) | Self-hosted Minecraft control plane (Java + Bedrock); **Elixir / Phoenix LiveView**, PostgreSQL. |
 | [Block-Panel-V2](https://github.com/Otterdays/Block-Panel-V2) | Native **Windows** desktop app for managing Minecraft servers; **Tauri v2**, **Rust**, **React**, **TypeScript**. |
 | [BlockPanel-V2-Public](https://github.com/Otterdays/Block-Panel-V2-Public) | Native **Windows** server manager (portable); Releases + [site](https://otterdays.github.io/Block-Panel-V2-Public/). |
-| [MC-Server-repo](https://github.com/Otterdays/MC-Server-repo) | Browser-based Minecraft dedicated server dashboard with server/mod management and an AI assistant; effectively **Block Panel v1**. |
+| [BlockPanel-V1](https://github.com/Otterdays/MC-Server-repo) | Browser-based Minecraft dedicated server dashboard with server/mod management and an AI assistant; effectively. |
 | [Otters-Den-Server](https://github.com/Otterdays/Otters-Den-Server) | **Otter's Den** survival server site (GitHub Pages): [otterdays.github.io/Otters-Den-Server](https://otterdays.github.io/Otters-Den-Server/). |
 
 ## Mods, plugins & tools
