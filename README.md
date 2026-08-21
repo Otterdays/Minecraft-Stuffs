@@ -49,12 +49,12 @@ their own repositories; this page is the map that ties the collection together.
 ### Server panels & hosting
 
 Panel lineage:
-`MC-Server-repo` -> `Block-Panel-V2` -> `Block-Panel-V3`
+`Block-Panel-V1` -> `Block-Panel-V2` -> `Block-Panel-V3` -> `Block-Panel-V4`
 
-- [**MC-Server-repo**](https://github.com/Otterdays/MC-Server-repo)  
-  Browser-based Minecraft dedicated server dashboard with server and mod
-  management plus an AI assistant. This is effectively the original Block Panel
-  direction.
+- [**Block-Panel-V1**](https://github.com/Otterdays/Block-Panel-V1)  
+  Browser-based Minecraft dedicated server dashboard (MC-26.1 / Fabric) with
+  server and mod management plus an AI assistant. Formerly tracked as
+  `MC-Server-repo`; this is the original Block Panel line.
 - [**Block-Panel-V2**](https://github.com/Otterdays/Block-Panel-V2)  
   Native **Windows** desktop app for managing Minecraft servers with
   **Tauri v2**, **Rust**, **React**, and **TypeScript**.
@@ -63,8 +63,18 @@ Panel lineage:
 - [**Block-Panel-V3**](https://github.com/Otterdays/Block-Panel-V3)  
   Self-hosted Minecraft control plane for Java and Bedrock servers using
   **Elixir / Phoenix LiveView** and **PostgreSQL**.
-- [**Otters-Den-Server**](https://github.com/Otterdays/Otters-Den-Server)  
-  GitHub Pages site for the **Otter's Den** survival server.
+- [**Block-Panel-V4**](https://github.com/Otterdays/Block-Panel-V4) ·
+  [Live](https://otterdays.github.io/Block-Panel-V4/)  
+  Native **Windows** Minecraft Server Control Center — PowerShell + WPF,
+  live console, properties, Modrinth queue. Double-click `launch.bat`.
+- [**High-Craft**](https://github.com/Otterdays/High-Craft) ·
+  [Live](https://otterdays.github.io/High-Craft/)  
+  Main friends survival world and public landing for the crew series
+  (Java 26.3 · Fabulously Optimized). Towns, kingdoms, infrastructure, lore.
+- [**Otters-Den-Server**](https://github.com/Otterdays/Otters-Den-Server) ·
+  [Live](https://otterdays.github.io/Otters-Den-Server/)  
+  Whitelist-only Fabric survival den (Java 26.1) — community site with
+  rules, stack, and join info.
 
 ### Mods, plugins & tools
 

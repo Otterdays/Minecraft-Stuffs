@@ -1,6 +1,42 @@
 <!-- PRESERVATION RULE: Never delete or replace content. Append or annotate only. -->
 # SCRATCHPAD
 
+## Active Task - 2026-08-21 Hub map: Den site, High-Craft, V4
+
+- Goal: wire live sites + new main server + Block Panel V4 into the hub map.
+- Status: completed.
+- Outcome: `README.md` and `index.html` now include:
+  - Otter's Den live: https://otterdays.github.io/Otters-Den-Server/
+  - High-Craft (main friends server) + live: https://otterdays.github.io/High-Craft/
+  - Block-Panel-V4 + live: https://otterdays.github.io/Block-Panel-V4/
+  - Lineage extended through V4.
+
+## Last 5 Actions
+
+1. Added Otters Den live-site click-through on README + landing cards.
+2. Indexed High-Craft as main friends SMP with GitHub + Pages links.
+3. Indexed Block-Panel-V4 with GitHub + Pages landing.
+4. Extended panel lineage to V4 on public surfaces.
+5. Updated SUMMARY / CHANGELOG / SCRATCHPAD (append-only).
+
+## Next Steps (from list check)
+
+- Optional: related but unlisted MC repos — `My-Minecraft-Server`,
+  `Mc-Server-Architecture-Fabric-Bedrock-Java`.
+
+## Out-of-Scope Observations
+
+- [AMENDED 2026-08-21]: `Block-Panel-V4` and `High-Craft` are now on the hub map.
+
+## Active Task - 2026-08-21 Block-Panel-V1 rename on hub
+
+- Goal: fix the hub project list so the MC server / original panel points at
+  `Block-Panel-V1`, not `MC-Server-repo`.
+- Status: completed.
+- Outcome: `README.md`, `index.html`, `DOCS/SUMMARY.md`, and `DOCS/CHANGELOG.md`
+  updated. Confirmed GitHub: `MC-Server-repo` resolves to
+  https://github.com/Otterdays/Block-Panel-V1 (v1.4.8, Fabric + Python helper).
+
 ## Active Task - 2026-05-13 README Web Link
 
 - Goal: add the live landing page URL near the top of `README.md`.

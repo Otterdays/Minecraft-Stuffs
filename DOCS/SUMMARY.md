@@ -1,13 +1,33 @@
 <!-- PRESERVATION RULE: Never delete or replace content. Append or annotate only. -->
 # SUMMARY
 
+## Project Status Update - 2026-08-21 (hub map expand)
+
+- Added [`Block-Panel-V4`](https://github.com/Otterdays/Block-Panel-V4) +
+  [live landing](https://otterdays.github.io/Block-Panel-V4/).
+- Added [`High-Craft`](https://github.com/Otterdays/High-Craft) as the main friends
+  server + [live site](https://otterdays.github.io/High-Craft/).
+- Otter's Den now links the public site
+  [otterdays.github.io/Otters-Den-Server](https://otterdays.github.io/Otters-Den-Server/).
+- Panel lineage on hub: `V1` -> `V2` -> `V3` -> `V4`.
+
+## Project Status Update - 2026-08-21
+
+- Panel V1 naming corrected across the hub: the MC server / original panel repo is
+  [`Block-Panel-V1`](https://github.com/Otterdays/Block-Panel-V1) (formerly listed
+  as `MC-Server-repo`). Lineage is now
+  `Block-Panel-V1` -> `Block-Panel-V2` -> `Block-Panel-V3`.
+  [AMENDED 2026-08-21]: lineage extended to `Block-Panel-V4`.
+- `README.md` and `index.html` link and copy updated to match.
+
 ## Project Status Update - 2026-05-13
 
 - `README.md` now serves as a more thematic landing page for the repo hub.
 - The public page now highlights the repo purpose, docs entry points, and the
   progression from `MC-Server-repo` to `Block-Panel-V2` to `Block-Panel-V3`.
+  [AMENDED 2026-08-21]: V1 is `Block-Panel-V1`, not `MC-Server-repo`.
 - A standalone root `index.html` now provides a visual landing website for the repo
-  links without requiring any build step.
+    links without requiring any build step.
 - Public-facing branding now presents the collection as `Otters MC Studios` while
   keeping `Minecraft-Stuffs` as the hub repo name.
 - `README.md` now links directly to the live GitHub Pages site near the top for
@@ -44,6 +64,8 @@
   - `advancement-fix`
   - `Block-Panel-V2`
   - `MC-Server-repo`
+  - [AMENDED 2026-08-21]: `MC-Server-repo` entry replaced by `Block-Panel-V1`
+  - [AMENDED 2026-08-21]: also `Block-Panel-V4`, `High-Craft`; Otter's Den live site wired
 
 ## Notes
 
