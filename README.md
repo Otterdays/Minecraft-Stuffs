@@ -78,33 +78,33 @@ Panel lineage:
 
 ### Mods, plugins & tools
 
-- [**Mc-Core-Mod**](https://github.com/Otterdays/Mc-Core-Mod)  
-  Fabric core library plus optional core mod/API jar for shared services, event
-  hooks, ready-state dispatch, and update checks.
-- [**Minecraft-Civ-Remixed**](https://github.com/Otterdays/Minecraft-Civ-Remixed)  
-  Fabric civ/economy add-on with wallet commands, onboarding messages, jobs, and
-  optional mining or combat payouts.
-- [**advancement-fix**](https://github.com/Otterdays/advancement-fix)  
+- [**Advancement Fix**](https://github.com/Otterdays/advancement-fix)  
   Client-side Fabric mod that enlarges the vanilla Advancements screen without
   replacing advancement data.
-- [**McOtterShaders**](https://github.com/Otterdays/McOtterShaders)  
-  Shader pack work for OptiFine and Iris, with GLSL plus repo-side docs.
-- [**MC-Helpy-Helper**](https://github.com/Otterdays/MC-Helpy-Helper)  
-  Fabric mod that turns `/help` into a searchable command browser.
+- [**ChipperChopper**](https://github.com/Otterdays/ChipperChopper)  
+  Fabric `1.20.1` project for autonomous AI tree harvesting with monitoring HUD.
+- [**Civ Remixed**](https://github.com/Otterdays/Minecraft-Civ-Remixed)  
+  Fabric civ/economy add-on with wallet commands, onboarding messages, jobs, and
+  optional mining or combat payouts.
+- [**Companion Map**](https://github.com/Otterdays/MC-Companion-Map)  
+  Fabric `1.20.1` mod with a local HTTP API plus an Android overhead map
+  companion over LAN.
+- [**Core Mod**](https://github.com/Otterdays/Mc-Core-Mod)  
+  Fabric core library plus optional core mod/API jar for shared services, event
+  hooks, ready-state dispatch, and update checks.
+- [**Fabric Sample Mod**](https://github.com/Otterdays/Minecraft-Fabric-Sample-Mod)  
+  Barebones Fabric template for starting a new mod quickly.
 - [**Feeshman Deelux**](https://github.com/Otterdays/Feeshman-Deelux)  
   Fabric `1.20.1` mod focused on auto-fishing, HUD features, stats, and
   achievements.
-- [**ChipperChopper**](https://github.com/Otterdays/ChipperChopper)  
-  Fabric `1.20.1` project for autonomous AI tree harvesting with monitoring HUD.
-- [**Minecraft-Fabric-Sample-Mod**](https://github.com/Otterdays/Minecraft-Fabric-Sample-Mod)  
-  Barebones Fabric template for starting a new mod quickly.
-- [**MC-Texture-Maker**](https://github.com/Otterdays/MC-Texture-Maker)  
-  Python texture and skin editor with `CustomTkinter` and 3D preview tooling.
-- [**MC-Companion-Map**](https://github.com/Otterdays/MC-Companion-Map)  
-  Fabric `1.20.1` mod with a local HTTP API plus an Android overhead map
-  companion over LAN.
-- [**PaperMC-Plugins**](https://github.com/Otterdays/PaperMC-Plugins)  
+- [**Helpy Helper**](https://github.com/Otterdays/MC-Helpy-Helper)  
+  Fabric mod that turns `/help` into a searchable command browser.
+- [**Otter Shaders**](https://github.com/Otterdays/McOtterShaders)  
+  Shader pack work for OptiFine and Iris, with GLSL plus repo-side docs.
+- [**Paper Plugins**](https://github.com/Otterdays/PaperMC-Plugins)  
   Minimal Paper plugin scaffold using Gradle Kotlin and the modern Paper line.
+- [**Texture Maker**](https://github.com/Otterdays/MC-Texture-Maker)  
+  Python texture and skin editor with `CustomTkinter` and 3D preview tooling.
 
 ## Notes
 

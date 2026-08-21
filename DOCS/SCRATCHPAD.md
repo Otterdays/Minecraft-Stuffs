@@ -1,6 +1,20 @@
 <!-- PRESERVATION RULE: Never delete or replace content. Append or annotate only. -->
 # SCRATCHPAD
 
+## Active Task - 2026-08-21 Alphabetize mods list + push
+
+- Goal: A–Z mods/plugins titles; commit and push hub updates.
+- Status: completed (cards restored after sort truncation; committing next).
+- Outcome: README + index.html mods A–Z; friendly display names; prior hub map
+  entries included in this push.
+
+## Active Task - 2026-08-21 Friendly mod display names
+
+- Goal: clean mods/tools titles — drop MC/Minecraft prefixes, hyphens → spaces,
+  capitalize Advancement Fix.
+- Status: completed.
+- Outcome: `README.md` + `index.html` display names updated; GitHub URLs unchanged.
+
 ## Active Task - 2026-08-21 Hub map: Den site, High-Craft, V4
 
 - Goal: wire live sites + new main server + Block Panel V4 into the hub map.

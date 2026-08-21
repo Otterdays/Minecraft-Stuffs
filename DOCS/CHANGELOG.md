@@ -28,6 +28,9 @@ The format loosely follows Keep a Changelog.
 
 ### Changed
 
+- Alphabetized mods/plugins (& tools in README) by display title A–Z.
+- Mods/tools display titles: removed MC/Minecraft prefixes, hyphens → spaces,
+  `advancement-fix` → **Advancement Fix** (repo URLs unchanged).
 - Corrected panel V1 identity: hub now lists
   [`Block-Panel-V1`](https://github.com/Otterdays/Block-Panel-V1) instead of
   `MC-Server-repo` (`README.md`, `index.html`, status docs).
