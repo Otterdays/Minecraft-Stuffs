@@ -83,7 +83,8 @@ Panel lineage:
   replacing advancement data.
 - [**ChipperChopper**](https://github.com/Otterdays/ChipperChopper)  
   Fabric `1.20.1` project for autonomous AI tree harvesting with monitoring HUD.
-- [**Civ Remixed**](https://github.com/Otterdays/Minecraft-Civ-Remixed)  
+- [**Civ Remixed**](https://github.com/Otterdays/Minecraft-Civ-Remixed) ·
+  [Modrinth](https://modrinth.com/mod/otter-civ)  
   Fabric civ/economy add-on with wallet commands, onboarding messages, jobs, and
   optional mining or combat payouts.
 - [**Companion Map**](https://github.com/Otterdays/MC-Companion-Map)  
@@ -103,6 +104,9 @@ Panel lineage:
   Shader pack work for OptiFine and Iris, with GLSL plus repo-side docs.
 - [**Paper Plugins**](https://github.com/Otterdays/PaperMC-Plugins)  
   Minimal Paper plugin scaffold using Gradle Kotlin and the modern Paper line.
+- [**Simple FPS Mod**](https://modrinth.com/mod/simple-fps-mod)  
+  Lightweight client-side FPS counter (top-left, once-per-second) with an easy
+  show/hide toggle — Fabric · Minecraft 26.1.2.
 - [**Texture Maker**](https://github.com/Otterdays/MC-Texture-Maker)  
   Python texture and skin editor with `CustomTkinter` and 3D preview tooling.
 

@@ -1,6 +1,14 @@
 <!-- PRESERVATION RULE: Never delete or replace content. Append or annotate only. -->
 # SCRATCHPAD
 
+## Active Task - 2026-08-21 Modrinth links (FPS + Civ)
+
+- Goal: add Simple FPS Mod + Civ Remixed Modrinth pages to the hub.
+- Status: completed.
+- Outcome: README + index.html updated.
+  - FPS: https://modrinth.com/mod/simple-fps-mod
+  - Civ: https://modrinth.com/mod/otter-civ (+ existing GitHub)
+
 ## Active Task - 2026-08-21 Alphabetize mods list + push
 
 - Goal: A–Z mods/plugins titles; commit and push hub updates.

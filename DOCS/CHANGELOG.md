@@ -9,6 +9,9 @@ The format loosely follows Keep a Changelog.
 
 ### Added
 
+- Hub Modrinth links:
+  - [Simple FPS Mod](https://modrinth.com/mod/simple-fps-mod)
+  - [Civ Remixed / otter-civ](https://modrinth.com/mod/otter-civ)
 - Hub entries for [`Block-Panel-V4`](https://github.com/Otterdays/Block-Panel-V4)
   ([live](https://otterdays.github.io/Block-Panel-V4/)) and
   [`High-Craft`](https://github.com/Otterdays/High-Craft)
